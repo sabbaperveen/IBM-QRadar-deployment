@@ -52,7 +52,7 @@ IBM QRadar is a leading SIEM (Security Information and Event Management) tool th
     - At the end of the installation, a password will be required to set up the QRadar console.
 
 11. **Check Machine IP**
-    - After installation, run `ifconfig` to check the machine IP, which will be required to open the QRadar console on your browser.
+    - After installation, run `ip a` to check the machine IP, which will be required to open the QRadar console on your browser.
 
 12. **Access the QRadar Console**
     - Open your web browser and navigate to `https://YourIP/console`, replacing "YourIP" with the actual IP address (e.g., `https://192.168.1.1/console`). You'll be directed to the QRadar Login page, where you should enter the credentials you set up for the QRadar console.
