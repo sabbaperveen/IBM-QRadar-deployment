@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This comprehensive guide will walk you through the process of installing and setting up IBM QRadar Community Edition 7.3.3. Additionally, we'll explore how to forward Windows logs to QRadar using WinCollect and Sysmon.
+This comprehensive guide will walk you through the process of installing and setting up IBM QRadar Community Edition 7.3.3. 
 
 ### IBM QRadar: A Robust SIEM Tool
 
