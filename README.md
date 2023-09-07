@@ -51,14 +51,3 @@ IBM QRadar stands as a leading SIEM (Security Information and Event Management) 
 10. **Access the QRadar Console**
     - Open your web browser and navigate to `https://YourIP/console`, replacing "YourIP" with the actual IP address (e.g., `https://192.168.1.1/console`). You'll be directed to the QRadar Login page, where you should enter the credentials you set up for the QRadar console.
 
-## Installing and Configuring WinCollect and Sysmon
-
-12. In the next section, we will guide you through the installation and configuration of WinCollect and Sysmon to facilitate the forwarding of Windows logs to QRadar.
-
-## Conclusion
-
-By successfully completing the installation of IBM QRadar Community Edition and configuring WinCollect and Sysmon for Windows log forwarding, you now have a potent SIEM tool at your disposal for monitoring network security and detecting potential threats.
-
----
-
-
