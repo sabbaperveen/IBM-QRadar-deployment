@@ -1,14 +1,12 @@
-# IBM-QRadar-deployment
-
-# How to Install and Configure IBM QRadar Community Edition
+# Installing and Configuring IBM QRadar Community Edition
 
 ## Introduction
 
-This comprehensive guide will walk you through the process of installing and setting up IBM QRadar Community Edition 7.3.3. 
+This comprehensive guide will walk you through the process of installing and setting up IBM QRadar Community Edition 7.3.3. QRadar is a powerful SIEM (Security Information and Event Management) tool that excels in collecting, processing, and analyzing real-time network data for effective network security management.
 
 ### IBM QRadar: A Robust SIEM Tool
 
-IBM QRadar stands as a leading SIEM (Security Information and Event Management) tool that excels in collecting, processing, analyzing, and providing real-time network data. QRadar's capabilities extend to network security by offering real-time data monitoring, alerts, offense management, and swift responses to network threats.
+IBM QRadar is a leading SIEM (Security Information and Event Management) tool that collects, processes, performs analysis, and gathers real-time network data. QRadar leverages these logs to manage network security by providing real-time data monitoring, warnings and offenses, and responses to network risks.
 
 ## Step-by-Step Installation Procedure
 
@@ -34,20 +32,34 @@ IBM QRadar stands as a leading SIEM (Security Information and Event Management) 
 6. **Set Up CLI Password**
    - After logging in, you'll need to set up a new CLI (command line interface) password.
 
-7. **Initialize Setup**
-   - Execute the `./setup` command. This will present the license agreement. Press "q" to skip through it quickly and then "Y" to confirm, initiating the installation process. Take a break as this step may take approximately 1.5–2 hours.
-   - If you encounter the error "ERROR: hostname must be a fully qualified domain name ERROR: Generating AUTO_INSTALL_INSTRUCTIONS file failed," resolve it by running this command:
-     ```
-     hostnamectl set-hostname localhost.localdomain
-     ```
-     Afterward, re-run the process from step 7.
+7. **Change the Static IP Address and Set FQDN Hostname Using `nmtui`**
+   - To set a static IP address and FQDN hostname before proceeding with the installation, follow these steps:
+     - Open the `nmtui` utility by running `nmtui` in the terminal.
+     - Select "Edit a connection" and choose the network interface you want to configure.
+     - Under "IPv4 CONFIGURATION," change the method to "Manual" and provide the static IP address, subnet mask, gateway, and DNS servers.
+     - In the "Identity" section, set the hostname as a fully qualified domain name (FQDN).
+     - Save the configuration and activate the connection.
+     - Exit `nmtui` when done.
 
-8. **Create QRadar Console Password**
-   - Upon completion of the installation, you'll be prompted to set a password for the QRadar console.
+8. **Continue with the Installation**
+   - Once you have set the static IP address and FQDN hostname, you can proceed with the installation.
+   - Run the `./setup` command to initiate the installation process.
 
-9. **Check Machine IP**
-   - To access the QRadar console via a web browser, run the `ifconfig` command to retrieve the machine's IP address.
+9. **Follow the Installation Steps**
+   - You will see the license agreement. Press "q" to skip through it quickly and then "Y" to confirm, initiating the installation. Take a break as this step may take approximately 1.5–2 hours.
 
-10. **Access the QRadar Console**
+10. **Set Up QRadar Console Password**
+    - At the end of the installation, a password will be required to set up the QRadar console.
+
+11. **Check Machine IP**
+    - After installation, run `ifconfig` to check the machine IP, which will be required to open the QRadar console on your browser.
+
+12. **Access the QRadar Console**
     - Open your web browser and navigate to `https://YourIP/console`, replacing "YourIP" with the actual IP address (e.g., `https://192.168.1.1/console`). You'll be directed to the QRadar Login page, where you should enter the credentials you set up for the QRadar console.
 
+## Conclusion
+
+Congratulations! You have successfully completed the installation of IBM QRadar Community Edition. With QRadar, you now have a powerful SIEM tool at your disposal to monitor your network's security and respond to potential threats effectively.
+
+---
+Author: Saba Perveen
